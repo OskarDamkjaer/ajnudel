@@ -1,6 +1,8 @@
 const DateFormat = require('dateformat');
 const JsonSocket = require('json-socket');
-const { performance } = require('perf_hooks');
+const {
+    performance
+} = require('perf_hooks');
 const Net = require('net');
 const open = require('opn');
 const argv = require('minimist')(process.argv.slice(2));
@@ -8,7 +10,11 @@ const argv = require('minimist')(process.argv.slice(2));
 const Mamba = require('./domain/mamba-client.js');
 const GameSettings = require('./domain/mamba/gameSettings.js');
 
-const Colors = { yellow: '\x1b[1m\x1b[33m', red: '\x1b[1m\x1b[31m', reset: '\x1b[0m' };
+const Colors = {
+    yellow: '\x1b[1m\x1b[33m',
+    red: '\x1b[1m\x1b[31m',
+    reset: '\x1b[0m'
+};
 
 let snakeBot = null;
 let gameInfo = null;
@@ -74,7 +80,7 @@ function parseOptions(argv) {
     const options = {
         help: argv.h || argv.help,
         snakeScript: argv._ ? argv._[0] : null,
-        user: argv.u || argv.user,
+        user: argv.u || "hazard spaghetti",
         host: argv.host ? argv.host : 'snake.cygni.se',
         port: argv.port ? argv.port : 80,
         venue: argv.venue ? argv.venue : 'training',
@@ -155,76 +161,76 @@ function endGame(exit, event) {
 // Mamba client events are handled and responded to below.
 function onEvent(event) {
     switch (event.type) {
-    case 'CONNECTED':
-        log('Server connected!');
-        prepareNewGame();
-        break;
+        case 'CONNECTED':
+            log('Server connected!');
+            prepareNewGame();
+            break;
 
-    case 'REGISTERED':
-        log('Ready to play!');
-        gameInfo = event.payload;
-        client.startGame();
-        break;
+        case 'REGISTERED':
+            log('Ready to play!');
+            gameInfo = event.payload;
+            client.startGame();
+            break;
 
-    case 'GAME_MAP_UPDATED':
-        log(`Game map updated - gameTick:${event.payload.getGameTick()}`);
-        log(`gameid: ${event.payload.getGameId()}`);
-        handleGameUpdate(event.payload);
-        break;
+        case 'GAME_MAP_UPDATED':
+            log(`Game map updated - gameTick:${event.payload.getGameTick()}`);
+            log(`gameid: ${event.payload.getGameId()}`);
+            handleGameUpdate(event.payload);
+            break;
 
-    case 'GAME_SNAKE_DEAD':
-        log('A snake died!');
+        case 'GAME_SNAKE_DEAD':
+            log('A snake died!');
 
-        if (snakeBot.onSnakeDied) {
-            snakeBot.onSnakeDied(event);
-        }
-        break;
+            if (snakeBot.onSnakeDied) {
+                snakeBot.onSnakeDied(event);
+            }
+            break;
 
-    case 'NEW_GAME_STARTED':
-        log('New game started!');
-        log(JSON.stringify(event.payload));
+        case 'NEW_GAME_STARTED':
+            log('New game started!');
+            log(JSON.stringify(event.payload));
 
-        if (snakeBot.onGameStarted) {
-            snakeBot.onGameStarted(event);
-        }
-        break;
+            if (snakeBot.onGameStarted) {
+                snakeBot.onGameStarted(event);
+            }
+            break;
 
-    case 'GAME_LINK':
-        log('Game link!');
-        gameLink = event.payload;
-        break;
+        case 'GAME_LINK':
+            log('Game link!');
+            gameLink = event.payload;
+            break;
 
-    case 'GAME_ENDED':
-        log('Game ended!');
-        log(JSON.stringify(event.payload));
-        endGame(!isTournament() && !isArena()); // Do not exit in tournament or arena mode.
+        case 'GAME_ENDED':
+            log('Game ended!');
+            log(JSON.stringify(event.payload));
+            endGame(!isTournament() && !isArena()); // Do not exit in tournament or arena mode.
 
-        if (snakeBot.onGameEnded) {
-            snakeBot.onGameEnded(event);
-        }
-        break;
+            if (snakeBot.onGameEnded) {
+                snakeBot.onGameEnded(event);
+            }
+            break;
 
-    case 'GAME_RESULT':
-        log('Game result!');
+        case 'GAME_RESULT':
+            log('Game result!');
 
-        if (snakeBot.onGameResult) {
-            snakeBot.onGameResult(event);
-        }
-        break;
+            if (snakeBot.onGameResult) {
+                snakeBot.onGameResult(event);
+            }
+            break;
 
-    case 'TOURNAMENT_ENDED':
-        log('Tournament ended!');
-        endGame(true);
+        case 'TOURNAMENT_ENDED':
+            log('Tournament ended!');
+            endGame(true);
 
-        if (snakeBot.onTournamentEnded) {
-            snakeBot.onTournamentEnded(event);
-        }
-        break;
+            if (snakeBot.onTournamentEnded) {
+                snakeBot.onTournamentEnded(event);
+            }
+            break;
 
-    default:
-    case 'ERROR':
-        logError(`Error - ${event.payload}`);
-        break;
+        default:
+        case 'ERROR':
+            logError(`Error - ${event.payload}`);
+            break;
     }
 }
 
@@ -280,7 +286,9 @@ function setupOiledBot(options, onSnakeInited) {
             }));
         },
         gameEnded() {
-            this.client.sendMessage(JSON.stringify({ type: 'GAME_END' }));
+            this.client.sendMessage(JSON.stringify({
+                type: 'GAME_END'
+            }));
         },
         handleResponse(response) {
             this.gameStateResponder(response);

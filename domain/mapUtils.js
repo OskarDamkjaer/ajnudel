@@ -130,12 +130,14 @@ function translateCoordinates(coordinates, mapWidth) {
 function getSnakePosition(playerId, map) {
     const snake = map.getSnakeInfoForId(playerId);
 
-    if (snake.isAlive()) {
+    const alive = snake.isAlive()
+
+    if (alive) {
         const pos = translatePosition(snake.getPositions()[0], map.getWidth());
-        return { x: pos.x, y: pos.y, alive: snake.isAlive() };
+        return { x: pos.x, y: pos.y, alive }
     }
 
-    return { x: 0, y: 0, alive: false };
+    return { x: 0, y: 0, alive };
 }
 
 /**
@@ -329,7 +331,7 @@ function getSnakesCoordinates(map, excludeIds) {
 function isWithinSquare(coordinate, nwCoordinate, seCoordinate) {
     return coordinate.x >= nwCoordinate.x &&
         coordinate.y >= nwCoordinate.y &&
-    coordinate.x <= seCoordinate.x &&
+        coordinate.x <= seCoordinate.x &&
         coordinate.y <= seCoordinate.y;
 }
 
@@ -371,6 +373,19 @@ function getTileInDirection(direction, snakeHeadPosition, map) {
     }, map);
 }
 
+function coordsAfterMove(direction, snakeHeadPosition) {
+    const delta = directionMovementDeltas[direction.toLocaleLowerCase()];
+
+    if (!delta) {
+        throw new Error(`Unknown movement direction: ${direction}`);
+    }
+
+    return {
+        x: snakeHeadPosition.x + delta.x,
+        y: snakeHeadPosition.y + delta.y
+    }
+}
+
 /**
  * Checks if the snake will die when moving in the direction in question
  *
@@ -407,3 +422,4 @@ exports.translateCoordinate = translateCoordinate;
 exports.translateCoordinates = translateCoordinates;
 exports.translatePosition = translatePosition;
 exports.translatePositions = translatePositions;
+exports.coordsAfterMove = coordsAfterMove;
