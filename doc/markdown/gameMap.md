@@ -35,13 +35,13 @@ Get food positions.
 
 ### GameMap.getObstaclePositions() 
 
-Get food positions.
+Get obstacle positions.
 
 **Returns**: `array.&lt;number&gt;`, Array of obstacle positions.
 
 ### GameMap.getSnakeInfos() 
 
-Get food positions.
+Get infromation about snakes.
 
 **Returns**: `array.&lt;snakeinfo&gt;`, Array of snake infos.
 

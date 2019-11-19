@@ -80,7 +80,7 @@ function parseOptions(argv) {
     const options = {
         help: argv.h || argv.help,
         snakeScript: argv._ ? argv._[0] : null,
-        user: argv.u || "hazard spaghetti",
+        user: argv.u || "ajnudel",
         host: argv.host ? argv.host : 'snake.cygni.se',
         port: argv.port ? argv.port : 80,
         venue: argv.venue ? argv.venue : 'training',

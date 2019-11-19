@@ -9,6 +9,7 @@
         "url": "https://github.com/cygni/snakebot-client-js.git"
     },
     "scripts": {
+        "play": "node snake-cli.js ./snakepit/ajnudel-bot.js --host primrose.blossom.dsek.se --port 8080  --gamelink",
         "test": "nyc mocha",
         "doc": "jsdoc ./domain/** -d doc/html; jsdox ./domain/** --output doc/markdown"
     },

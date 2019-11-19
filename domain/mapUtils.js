@@ -397,8 +397,7 @@ function coordsAfterMove(direction, snakeHeadPosition) {
 function canSnakeMoveInDirection(direction, snakeHeadPosition, map) {
     const tile = getTileInDirection(direction, snakeHeadPosition, map);
 
-    return tile.content === '' ||
-        tile.content === 'food';
+    return tile.content === '' || tile.content === 'food';
 }
 
 exports.canSnakeMoveInDirection = canSnakeMoveInDirection;
