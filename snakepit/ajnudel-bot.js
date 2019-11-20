@@ -63,19 +63,19 @@ function onMapUpdated(mapState, myUserId) {
         fill: 1
     };
 
+    const expandPositions = coord =>
+        possibleDirections
+        .map(dir => coordsAfterMove(dir, coord))
+        .filter(c => coordsAreDeadly(c));
+
+    const otherSnakesHeads = map
+        .getSnakeInfos()
+        .filter(a => a.getId() !== myUserId)
+        .map(snakeInfo => snakeInfo.getPositions()[0])
+        .filter(a => a)
+        .map(p => translatePosition(p, width));
+
     const avoidOthers = coord => {
-        const expandPositions = coord =>
-            possibleDirections
-            .map(dir => coordsAfterMove(dir, coord))
-            .filter(c => coordsAreDeadly(c));
-
-        const otherSnakesHeads = map
-            .getSnakeInfos()
-            .filter(a => a.getId() !== myUserId)
-            .map(snakeInfo => snakeInfo.getPositions()[0])
-            .filter(a => a)
-            .map(p => translatePosition(p, width));
-
         const oneStep = otherSnakesHeads.map(expandPositions).reduce(flatten, []);
         const twoStep = oneStep.map(expandPositions).reduce(flatten, []);
         const superClose = oneStep.includes(coord) ? 3 : 0;
@@ -84,6 +84,7 @@ function onMapUpdated(mapState, myUserId) {
     };
 
     const fillBois = coord => {
+        // we now use rooms even if they are easy to shut
         // something something call stack exeeded
         const point = translateCoordinate(coord, width);
         let que = [point];
@@ -98,14 +99,18 @@ function onMapUpdated(mapState, myUserId) {
 
             //console.log("count", count);
             //console.log("visited.len", visited.length);
-            if (visited.length > 300) {
-                // make this as high as it goes without latency issues
+            if (visited.length > 100) {
+                // 300 might enable latency issues
                 return count;
             }
+            const otherSnakeMoves = otherSnakesHeads
+                .map(expandPositions)
+                .reduce(flatten, []);
 
             const newCoords = possibleDirections
                 .map(dir => coordsAfterMove(dir, currCoords))
                 .filter(c => coordsAreDeadly(c))
+                .filter(c => otherSnakeMoves.includes(c)) // count one step to be closed as closed
                 .map(c => translateCoordinate(c, width))
                 .filter(p => !visited.includes(p));
             que = que.concat(newCoords);
