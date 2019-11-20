@@ -57,11 +57,13 @@ function onMapUpdated(mapState, myUserId) {
     const scoreSort = (b, a) => a.score - b.score;
     const weights = {
         death: -99999,
-        deathInTwo: -100,
-        food: 1
+        deathInTwo: -3,
+        food: 1,
+        othersWeight: -1,
+        fill: 1
     };
 
-    const fillBois = coord => {
+    const avoidOthers = coord => {
         const expandPositions = coord =>
             possibleDirections
             .map(dir => coordsAfterMove(dir, coord))
@@ -76,8 +78,12 @@ function onMapUpdated(mapState, myUserId) {
 
         const oneStep = otherSnakesHeads.map(expandPositions).reduce(flatten, []);
         const twoStep = oneStep.map(expandPositions).reduce(flatten, []);
-        const possibleOtherSnakes = twoStep.map(c => translateCoordinate(c, width));
+        const superClose = oneStep.includes(coord) ? 3 : 0;
+        const fairlyClose = twoStep.includes(coord) ? 1 : 0;
+        return (superClose + fairlyClose) * weights.othersWeight;
+    };
 
+    const fillBois = coord => {
         // something something call stack exeeded
         const point = translateCoordinate(coord, width);
         let que = [point];
@@ -85,13 +91,15 @@ function onMapUpdated(mapState, myUserId) {
         let count = 0;
 
         while (que.length !== 0) {
-            count += count;
+            count += 1;
             const currPos = que.pop();
             const currCoords = translatePosition(currPos, width);
             visited = visited.concat(currPos);
 
-            if (visited.length > 100) {
-                // make this 100 or more
+            //console.log("count", count);
+            //console.log("visited.len", visited.length);
+            if (visited.length > 300) {
+                // make this as high as it goes without latency issues
                 return count;
             }
 
@@ -100,16 +108,10 @@ function onMapUpdated(mapState, myUserId) {
                 .filter(c => coordsAreDeadly(c))
                 .map(c => translateCoordinate(c, width))
                 .filter(p => !visited.includes(p));
-            const penalty = newCoords.reduce(
-                (acc, curr) => (possibleOtherSnakes.includes(curr) ? acc + 1 : acc),
-                0
-            );
-            // TODO någon form av penalty utan att utesluta
-            //count -= penalty;
             que = que.concat(newCoords);
         }
 
-        return count;
+        return weights.fill * count;
     };
 
     const alterScore = (scoreChange, opt) => ({
@@ -153,65 +155,7 @@ function onMapUpdated(mapState, myUserId) {
             )
         )
         .map(opt => alterScore(fillBois(opt.coordsAfterMove), opt))
-        .map(debug("options"))
-        .sort(scoreSort)[0].direction;
-
-    log("I took:", bestDirection);
-    const snakeBrainDump = {};
-    snakeBrainDump.myCoords = myCoords;
-    return {
-        direction: bestDirection,
-        debugData: snakeBrainDump
-    };
-}
-
-function oldOnMapUpdated(mapState, myUserId) {
-    const weights = {
-        deathInOne: -99999,
-        deathInTwo: -10,
-        otherPpl: -1,
-        food: 1
-    };
-    const safeContents = ["", "food"];
-    const possibleDirections = ["UP", "DOWN", "LEFT", "RIGHT"];
-    const debug = (msg = "") => it => log(msg, it) || it;
-    const scoreSort = (b, a) => a.score - b.score;
-
-    const myCoords = getSnakePosition(myUserId, map);
-    const map = mapState.getMap();
-
-    const otherSnakePositions = Object.entries(getSnakesCoordinates(map))
-        .filter(([id, positions]) => id !== myUserId)
-        .reduce((acc, [id, positions]) => acc.concat(positions), []);
-
-    const sameXDir = otherSnakePositions.filter(({ x }) => x === myCoords.x);
-    const sameYDir = otherSnakePositions.filter(({ y }) => y === myCoords.y);
-
-    const tileAfterMove = (opt, coords, map) =>
-        getTileInDirection(
-            opt.direction,
-            coordsAfterMove(opt.direction, coords),
-            map
-        );
-
-    // {direction, score, rest} = option
-    const bestDirection = possibleDirections
-        .map(dir => ({ direction: dir, score: 0 }))
-        .map(opt => ({
-            ...opt,
-            oneStep: getTileInDirection(opt.direction, myCoords, map)
-        }))
-        .map(opt => ({...opt, twoStep: tileAfterMove(opt, myCoords, map) }))
-        .map(opt => ({
-            ...opt,
-            score: opt.score +
-                (safeContents.includes(opt.oneStep.content) ? 0 : weights.deathInOne)
-        }))
-        .map(opt => ({
-            ...opt,
-            score: opt.score +
-                (safeContents.includes(opt.twoStep.content) ? 0 : weights.deathInTwo)
-        }))
+        .map(opt => alterScore(avoidOthers(opt.coordsAfterMove), opt))
         .map(debug("options"))
         .sort(scoreSort)[0].direction;
 
