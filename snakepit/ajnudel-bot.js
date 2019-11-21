@@ -2,6 +2,7 @@
  * Snake Bot script.
  */
 const MapUtils = require("../domain/mapUtils.js");
+const { performance } = require("perf_hooks");
 
 let log = null; // Injected logger
 
@@ -41,6 +42,7 @@ const debug = (msg = "") => it => log(msg, it) || it;
 const flatten = (acc, curr) => acc.concat(curr);
 
 function onMapUpdated(mapState, myUserId) {
+    const startTime = performance.now();
     const map = mapState.getMap();
     const width = map.getWidth();
     const myCoords = getSnakePosition(myUserId, map);
@@ -49,24 +51,17 @@ function onMapUpdated(mapState, myUserId) {
     const possibleDirections = ["UP", "DOWN", "LEFT", "RIGHT"];
     const occupiedTiles = getOccupiedMapTiles(map);
 
-    const coordsAreDeadly = coordinate => {
+    const safeHere = coordinate => {
         const { content } = quickTileAt({ coordinate });
         return safeContents.includes(content);
     };
 
     const scoreSort = (b, a) => a.score - b.score;
-    const weights = {
-        death: -99999,
-        deathInTwo: -3,
-        food: 1,
-        othersWeight: -1,
-        fill: 1
-    };
 
     const expandPositions = coord =>
         possibleDirections
         .map(dir => coordsAfterMove(dir, coord))
-        .filter(c => coordsAreDeadly(c));
+        .filter(c => safeHere(c));
 
     const otherSnakesHeads = map
         .getSnakeInfos()
@@ -75,17 +70,23 @@ function onMapUpdated(mapState, myUserId) {
         .filter(a => a)
         .map(p => translatePosition(p, width));
 
-    const avoidOthers = coord => {
-        const oneStep = otherSnakesHeads.map(expandPositions).reduce(flatten, []);
-        const twoStep = oneStep.map(expandPositions).reduce(flatten, []);
-        const superClose = oneStep.includes(coord) ? 3 : 0;
-        const fairlyClose = twoStep.includes(coord) ? 1 : 0;
-        return (superClose + fairlyClose) * weights.othersWeight;
-    };
+    const othersAfterOne = otherSnakesHeads
+        .map(expandPositions)
+        .reduce(flatten, []);
+    const othersAfterTwo = othersAfterOne
+        .map(expandPositions)
+        .reduce(flatten, []);
+    const othersAfterThree = othersAfterTwo
+        .map(expandPositions)
+        .reduce(flatten, []);
 
-    const fillBois = coord => {
+    const avoidOthers = coord => {};
+
+    let lastCount = 0;
+    let totalVisited = [];
+
+    const fillRoom = coord => {
         // we now use rooms even if they are easy to shut
-        // something something call stack exeeded
         const point = translateCoordinate(coord, width);
         let que = [point];
         let visited = [];
@@ -95,33 +96,34 @@ function onMapUpdated(mapState, myUserId) {
             count += 1;
             const currPos = que.pop();
             const currCoords = translatePosition(currPos, width);
-            visited = visited.concat(currPos);
 
-            //console.log("count", count);
-            //console.log("visited.len", visited.length);
-            if (visited.length > 100) {
-                // 300 might enable latency issues
-                return count;
+            if (totalVisited.includes(currPos)) {
+                console.log("room joined");
+                return lastCount;
             }
-            const otherSnakeMoves = otherSnakesHeads
-                .map(expandPositions)
-                .reduce(flatten, []);
 
-            const newCoords = possibleDirections
-                .map(dir => coordsAfterMove(dir, currCoords))
-                .filter(c => coordsAreDeadly(c))
-                .filter(c => otherSnakeMoves.includes(c)) // count one step to be closed as closed
+            visited = visited.concat(currPos);
+            if (count > 80) {
+                // 300 might enable latency issues
+                break;
+            }
+
+            const newCoords = expandPositions(currCoords)
+                .filter(c => othersAfterOne.includes(c)) // count one step to be closed as closed
                 .map(c => translateCoordinate(c, width))
                 .filter(p => !visited.includes(p));
+
             que = que.concat(newCoords);
         }
 
-        return weights.fill * count;
+        totalVisited = totalVisited.concat(visited);
+        lastCount = count;
+        return count;
     };
 
-    const alterScore = (scoreChange, opt) => ({
+    const addTag = (tag, opt) => ({
         ...opt,
-        score: opt.score + scoreChange
+        tags: opt.tags.concat(tag).filter(a => a)
     });
 
     function quickTileAt({ position, coordinate }) {
@@ -136,37 +138,47 @@ function onMapUpdated(mapState, myUserId) {
         return occupiedTiles[p] || { content: "" };
     }
 
-    log(fillBois(myCoords));
+    const weights = {
+        death: -99999,
+        trap: -10000,
+        deathIn2: -3,
+        food: 1,
+        othersWeight: -1,
+        fill: 1
+    };
+
+    const setScore = opt => ({
+        ...opt,
+        score: opt.tags.reduce((acc, curr) => acc + weights[curr], 0)
+    });
 
     const bestDirection = possibleDirections
         .map(direction => {
             const first = coordsAfterMove(direction, myCoords);
             const second = coordsAfterMove(direction, first);
+            const roomSize = fillRoom(first);
 
             return {
                 direction,
+                tags: [],
                 score: 0,
                 coordsAfterMove: first,
-                coordsAfterTwoMoves: second
+                coordsAfterTwo: second,
+                roomSize
             };
         })
-        .map(opt =>
-            alterScore(coordsAreDeadly(opt.coordsAfterMove) ? 0 : weights.death, opt)
-        )
-        .map(opt =>
-            alterScore(
-                coordsAreDeadly(opt.coordsAfterTwoMoves) ? 0 : weights.deathInTwo,
-                opt
-            )
-        )
-        .map(opt => alterScore(fillBois(opt.coordsAfterMove), opt))
-        .map(opt => alterScore(avoidOthers(opt.coordsAfterMove), opt))
+        .map(opt => addTag(!safeHere(opt.coordsAfterMove) && "death", opt))
+        .map(opt => addTag(!safeHere(opt.coordsAfterTwo) && "deathIn2", opt))
+        .map(opt => addTag(opt.roomSize < 80 && "trap", opt))
+        .map(setScore)
         .map(debug("options"))
         .sort(scoreSort)[0].direction;
 
+    // TODO, check if going to be to slow and if so, don't do the call
     log("I took:", bestDirection);
     const snakeBrainDump = {};
     snakeBrainDump.myCoords = myCoords;
+    console.log("thinking took:", performance.now() - startTime);
     return {
         direction: bestDirection,
         debugData: snakeBrainDump
@@ -209,7 +221,7 @@ function onGameResult(event) {
             ({ playerName }) => playerName === "ajnudel"
         ),
         event.payload.playerRanks.find(({ playerName }) => playerName === "ajnudel")
-        .isAlive ?
+        .alive ?
         "YOU WIN" :
         "YOU LOST"
     );
