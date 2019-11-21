@@ -6,13 +6,6 @@ const { performance } = require("perf_hooks");
 
 let log = null; // Injected logger
 
-const directionMovementDeltas = {
-    left: { x: -1, y: 0 },
-    right: { x: 1, y: 0 },
-    up: { x: 0, y: -1 },
-    down: { x: 0, y: 1 }
-};
-
 const {
     canSnakeMoveInDirection,
     getEuclidianDistance,
@@ -46,7 +39,6 @@ function onMapUpdated(mapState, myUserId) {
     const map = mapState.getMap();
     const width = map.getWidth();
     const myCoords = getSnakePosition(myUserId, map);
-    const maxPosition = width * map.getHeight();
     const safeContents = ["", "food"];
     const possibleDirections = ["UP", "DOWN", "LEFT", "RIGHT"];
     const occupiedTiles = getOccupiedMapTiles(map);
@@ -80,13 +72,35 @@ function onMapUpdated(mapState, myUserId) {
         .map(expandPositions)
         .reduce(flatten, []);
 
-    const avoidOthers = coord => {};
+    const fill = coords => {
+        shouldDie = false;
+        const depth = dfs(coords, {}, 0)
+        shouldDie = false; //Torktummlarprincipen
+        return depth
+    }
 
-    let lastCount = 0;
-    let totalVisited = [];
+    let shouldDie = false
+    const wantedDistance = 80
+    const dfs = (coords, visited, depth) => {
+        const pos = translateCoordinate(coords)
+        const hitBottom = depth === wantedDistance
+        const dead = !safeHere(coords)
+        const dejavu = visited[pos]
+
+        shouldDie = shouldDie || hitBottom
+
+        if (hitBottom || dead || dejavu || shouldDie) {
+            return depth
+        }
+        visited[pos] = true
+
+        return Math.max(...expandPositions(coords).map(c => dfs(c, visited, depth + 1)))
+    }
+    const startingPositions = expandPositions(myCoords)
+
+
 
     const fillRoom = coord => {
-        // we now use rooms even if they are easy to shut
         const point = translateCoordinate(coord, width);
         let que = [point];
         let visited = [];
@@ -94,9 +108,10 @@ function onMapUpdated(mapState, myUserId) {
 
         while (que.length !== 0) {
             count += 1;
-            const currPos = que.pop();
+            const currPos = que.pop()
             const currCoords = translatePosition(currPos, width);
 
+            // dictionary
             if (totalVisited.includes(currPos)) {
                 console.log("room joined");
                 return lastCount;
@@ -109,14 +124,14 @@ function onMapUpdated(mapState, myUserId) {
             }
 
             const newCoords = expandPositions(currCoords)
-                .filter(c => othersAfterOne.includes(c)) // count one step to be closed as closed
+                .filter(c => !othersAfterOne.includes(c)) // count  step to be closed as closed
                 .map(c => translateCoordinate(c, width))
                 .filter(p => !visited.includes(p));
 
             que = que.concat(newCoords);
         }
 
-        totalVisited = totalVisited.concat(visited);
+        totalVisited = totalVisited.concat(visited); // finns problematik med att slå ihop
         lastCount = count;
         return count;
     };
@@ -140,6 +155,7 @@ function onMapUpdated(mapState, myUserId) {
 
     const weights = {
         death: -99999,
+        takenSoon: -20000,
         trap: -10000,
         deathIn2: -3,
         food: 1,
@@ -156,7 +172,10 @@ function onMapUpdated(mapState, myUserId) {
         .map(direction => {
             const first = coordsAfterMove(direction, myCoords);
             const second = coordsAfterMove(direction, first);
-            const roomSize = fillRoom(first);
+            const roomSize = fill(first)
+            const takenSoon = othersAfterOne.includes(first);
+            const canTrap;
+            const canWinBySepuku;
 
             return {
                 direction,
@@ -164,11 +183,13 @@ function onMapUpdated(mapState, myUserId) {
                 score: 0,
                 coordsAfterMove: first,
                 coordsAfterTwo: second,
-                roomSize
+                roomSize,
+                takenSoon
             };
         })
         .map(opt => addTag(!safeHere(opt.coordsAfterMove) && "death", opt))
         .map(opt => addTag(!safeHere(opt.coordsAfterTwo) && "deathIn2", opt))
+        .map(opt => addTag(opt.takenSoon && "takenSoon", opt))
         .map(opt => addTag(opt.roomSize < 80 && "trap", opt))
         .map(setScore)
         .map(debug("options"))
