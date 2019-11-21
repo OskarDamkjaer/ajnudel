@@ -74,66 +74,34 @@ function onMapUpdated(mapState, myUserId) {
 
     const fill = coords => {
         shouldDie = false;
-        const depth = dfs(coords, {}, 0)
+        const depth = dfs(coords, {}, 0);
         shouldDie = false; //Torktummlarprincipen
-        return depth
-    }
+        console.log(depth);
+        return depth;
+    };
 
-    let shouldDie = false
-    const wantedDistance = 80
+    let shouldDie = false; //snyggare med closure
+    const wantedDistance = 200;
     const dfs = (coords, visited, depth) => {
-        const pos = translateCoordinate(coords)
-        const hitBottom = depth === wantedDistance
-        const dead = !safeHere(coords)
-        const dejavu = visited[pos]
+        const pos = translateCoordinate(coords, width);
+        const hitBottom = depth === wantedDistance;
+        const dead = !safeHere(coords);
+        const dejavu = visited[pos];
+        const couldBeTaken = translateCoordinates(othersAfterOne, width).includes(
+            pos
+        );
 
-        shouldDie = shouldDie || hitBottom
+        shouldDie = shouldDie || hitBottom;
 
-        if (hitBottom || dead || dejavu || shouldDie) {
-            return depth
+        if (hitBottom || dead || dejavu || shouldDie || couldBeTaken) {
+            return depth;
         }
-        visited[pos] = true
+        visited[pos] = true;
 
-        return Math.max(...expandPositions(coords).map(c => dfs(c, visited, depth + 1)))
-    }
-    const startingPositions = expandPositions(myCoords)
-
-
-
-    const fillRoom = coord => {
-        const point = translateCoordinate(coord, width);
-        let que = [point];
-        let visited = [];
-        let count = 0;
-
-        while (que.length !== 0) {
-            count += 1;
-            const currPos = que.pop()
-            const currCoords = translatePosition(currPos, width);
-
-            // dictionary
-            if (totalVisited.includes(currPos)) {
-                console.log("room joined");
-                return lastCount;
-            }
-
-            visited = visited.concat(currPos);
-            if (count > 80) {
-                // 300 might enable latency issues
-                break;
-            }
-
-            const newCoords = expandPositions(currCoords)
-                .filter(c => !othersAfterOne.includes(c)) // count  step to be closed as closed
-                .map(c => translateCoordinate(c, width))
-                .filter(p => !visited.includes(p));
-
-            que = que.concat(newCoords);
-        }
-
-        totalVisited = totalVisited.concat(visited); // finns problematik med att slå ihop
-        lastCount = count;
-        return count;
+        return Math.max(
+            ...expandPositions(coords).map(c => dfs(c, visited, depth + 1)),
+            0
+        );
     };
 
     const addTag = (tag, opt) => ({
@@ -160,7 +128,7 @@ function onMapUpdated(mapState, myUserId) {
         deathIn2: -3,
         food: 1,
         othersWeight: -1,
-        fill: 1
+        emptyTile: 1
     };
 
     const setScore = opt => ({
@@ -172,10 +140,10 @@ function onMapUpdated(mapState, myUserId) {
         .map(direction => {
             const first = coordsAfterMove(direction, myCoords);
             const second = coordsAfterMove(direction, first);
-            const roomSize = fill(first)
+            const roomSize = fill(first);
             const takenSoon = othersAfterOne.includes(first);
-            const canTrap;
-            const canWinBySepuku;
+            //const canTrap;
+            //const canWinBySepuku;
 
             return {
                 direction,
@@ -190,8 +158,11 @@ function onMapUpdated(mapState, myUserId) {
         .map(opt => addTag(!safeHere(opt.coordsAfterMove) && "death", opt))
         .map(opt => addTag(!safeHere(opt.coordsAfterTwo) && "deathIn2", opt))
         .map(opt => addTag(opt.takenSoon && "takenSoon", opt))
-        .map(opt => addTag(opt.roomSize < 80 && "trap", opt))
         .map(setScore)
+        .map(opt => ({
+            ...opt,
+            score: opt.score + opt.roomSize * weights.emptyTile
+        }))
         .map(debug("options"))
         .sort(scoreSort)[0].direction;
 
