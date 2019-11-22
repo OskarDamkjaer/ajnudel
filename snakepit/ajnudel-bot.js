@@ -85,11 +85,11 @@ function onMapUpdated(mapState, myUserId) {
     let shouldDie = false; //snyggare med closure
     const myDistance = 150;
     const nemDistance = 100;
-    const dfs = (coords, visited, depth, deadSpot) => {
+    const dfs = (coords, visited, depth, deadSpot = []) => {
         const timeAlmostUp = performance.now() - startTime > 200;
         const pos = translateCoordinate(coords, width);
         const dejavu = visited[pos];
-        const isDeadSpot = pos === deadSpot;
+        const isDeadSpot = deadSpot.includes(pos);
         let wantedDistance = myDistance;
         const hitBottom = depth === wantedDistance;
         let dead = !safeHere(coords);
@@ -110,7 +110,7 @@ function onMapUpdated(mapState, myUserId) {
         shouldDie = shouldDie || hitBottom;
 
         // avoid other snake thinking its instantly dead
-        if (deadSpot) {
+        if (deadSpot.length > 0) {
             couldBeTaken = false;
             dead = !safeHere(coords) && depth !== 0;
             wantedDistance = nemDistance;
@@ -189,7 +189,7 @@ function onMapUpdated(mapState, myUserId) {
         }))
         .sort((a, b) => a.dist - b.dist)[0] || { coords: { x: -1, y: -1 } };
 
-    const nemesisRoomSize = fill(nemesisHead, true);
+    const nemesisRoomSize = fill(nemesisHead, [true]);
 
     const bestOption = possibleDirections
         .map(direction => {
@@ -197,14 +197,13 @@ function onMapUpdated(mapState, myUserId) {
             const second = coordsAfterMove(direction, first);
             const roomSize = fill(first);
             const takenSoon = othersAfterOne.includes(first);
-            const nemesisNewRoom = fill(
-                nemesisHead,
+            const nemesisNewRoom = fill(nemesisHead, [
                 translateCoordinate(first, width)
-            );
-            const nemesisSecondRoom = fill(
-                nemesisHead,
+            ]);
+            const nemesisSecondRoom = fill(nemesisHead, [
+                translateCoordinate(first, width),
                 translateCoordinate(second, width)
-            );
+            ]);
             const removeNemesis = nemesisRoomSize - nemesisNewRoom;
             const removeNemesis2 = nemesisRoomSize - nemesisSecondRoom;
 
