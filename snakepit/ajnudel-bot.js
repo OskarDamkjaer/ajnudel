@@ -34,6 +34,8 @@ const {
 const debug = (msg = "") => it => log(msg, it) || it;
 const flatten = (acc, curr) => acc.concat(curr);
 // last direction
+let inTunnel = false;
+let trapped = false;
 
 function onMapUpdated(mapState, myUserId) {
     const startTime = performance.now();
@@ -81,9 +83,10 @@ function onMapUpdated(mapState, myUserId) {
     };
 
     let shouldDie = false; //snyggare med closure
-    const myDistance = 100;
-    const nemDistance = 30;
+    const myDistance = 150;
+    const nemDistance = 100;
     const dfs = (coords, visited, depth, deadSpot) => {
+        const timeAlmostUp = performance.now() - startTime > 200;
         const pos = translateCoordinate(coords, width);
         const dejavu = visited[pos];
         const isDeadSpot = pos === deadSpot;
@@ -93,10 +96,20 @@ function onMapUpdated(mapState, myUserId) {
         let couldBeTaken = translateCoordinates(othersAfterOne, width).includes(
             pos
         );
+        if (depth > 1) {
+            couldBeTaken =
+                couldBeTaken ||
+                translateCoordinates(othersAfterTwo, width).includes(pos);
+        }
+        if (depth > 2) {
+            couldBeTaken =
+                couldBeTaken ||
+                translateCoordinates(othersAfterThree, width).includes(pos);
+        }
+
         shouldDie = shouldDie || hitBottom;
 
-        //console.log(dead, dejavu, isDeadSpot, couldBeTaken);
-        // avoid other snake thinking its insantly dead
+        // avoid other snake thinking its instantly dead
         if (deadSpot) {
             couldBeTaken = false;
             dead = !safeHere(coords) && depth !== 0;
@@ -109,7 +122,8 @@ function onMapUpdated(mapState, myUserId) {
             dejavu ||
             shouldDie ||
             couldBeTaken ||
-            isDeadSpot
+            isDeadSpot ||
+            timeAlmostUp
         ) {
             return depth;
         }
@@ -142,10 +156,11 @@ function onMapUpdated(mapState, myUserId) {
         death: -99999,
         takenSoon: -20000,
         trap: -10000,
-        deathIn2: -400,
-        dubbleslit: -300,
+        deathIn2: trapped ? 0 : -200,
+        dubbleslit: trapped ? 0 : inTunnel ? -100 : -300,
         food: 1,
         othersWeight: -1,
+        slitTolerance: 10,
         emptyTile: 1,
         removedFromNem: 2
     };
@@ -162,7 +177,7 @@ function onMapUpdated(mapState, myUserId) {
         score: opt.tags.reduce((acc, curr) => acc + weights[curr], 0)
     });
 
-    const customScore = (opt, score) => ({
+    const customScore = (score, opt) => ({
         ...opt,
         score: opt.score + score
     });
@@ -176,7 +191,7 @@ function onMapUpdated(mapState, myUserId) {
 
     const nemesisRoomSize = fill(nemesisHead, true);
 
-    const bestDirection = possibleDirections
+    const bestOption = possibleDirections
         .map(direction => {
             const first = coordsAfterMove(direction, myCoords);
             const second = coordsAfterMove(direction, first);
@@ -186,13 +201,18 @@ function onMapUpdated(mapState, myUserId) {
                 nemesisHead,
                 translateCoordinate(first, width)
             );
+            const nemesisSecondRoom = fill(
+                nemesisHead,
+                translateCoordinate(second, width)
+            );
             const removeNemesis = nemesisRoomSize - nemesisNewRoom;
+            const removeNemesis2 = nemesisRoomSize - nemesisSecondRoom;
 
             const slitWidth = ortoDir[direction]
                 .map(dir => {
-                    const oneSideStep = coordsAfterMove(dir, first);
-                    const twoSideStep = coordsAfterMove(dir, oneSideStep);
-                    return [oneSideStep, twoSideStep].map(safeHere);
+                    const one = coordsAfterMove(dir, first);
+                    const two = coordsAfterMove(dir, one);
+                    return [one, two].map(safeHere);
                 })
                 .reduce(flatten, [])
                 .filter(a => a).length;
@@ -206,7 +226,8 @@ function onMapUpdated(mapState, myUserId) {
                 roomSize,
                 takenSoon,
                 slitWidth,
-                removeNemesis
+                removeNemesis,
+                removeNemesis2
             };
         })
         .map(opt => addTag(!safeHere(opt.coordsAfterMove) && "death", opt))
@@ -215,17 +236,25 @@ function onMapUpdated(mapState, myUserId) {
         .map(opt => addTag(opt.roomSize < 80 && "trap", opt))
         .map(opt => addTag(opt.slitWidth < 2 && "dubbleslit", opt))
         .map(scoreTags)
-        .map(opt => customScore(opt, opt.roomSize * weights.emptyTile))
-        .map(opt => customScore(opt, opt.removeNemesis * weights.removedFromNem))
+        .map(opt => customScore(opt.roomSize * weights.emptyTile, opt))
+        .map(opt => customScore(opt.removeNemesis * weights.removedFromNem, opt))
+        .map(opt =>
+            customScore((opt.removeNemesis2 * weights.removedFromNem) / 2, opt)
+        )
         .map(debug("options"))
-        .sort(scoreSort)[0].direction;
+        .sort(scoreSort)[0];
 
+    const bestDirection = bestOption.direction;
+    inTunnel = bestOption.tags.includes("dubbleslit");
+    trapped = bestOption.tags.includes("trap");
     // TODO, check if going to be to slow and if so, don't do the call
     // TODO, prevent full on collission.
     // TODO, weights
     // TODO, check that allways takes best room
     // tood prevent snirklande längs väggar
     // TODo försölk gå mot kanten ju mer i mitten du är
+    // todo fler djup på dfs men capa beräkningarna till att inte gå över tidne
+    // Todo randoma om vi inte är i en slit
     log("I took:", bestDirection);
     const snakeBrainDump = {};
     snakeBrainDump.myCoords = myCoords;
