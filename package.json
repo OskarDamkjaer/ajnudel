@@ -9,9 +9,11 @@
         "url": "https://github.com/cygni/snakebot-client-js.git"
     },
     "scripts": {
-        "play": "node snake-cli.js ./snakepit/ajnudel-bot.js --host primrose.blossom.dsek.se --port 8080  --gamelink",
+        "play": "node snake-cli.js ./snakepit/ajnudel-bot.js --host primrose.blossom.dsek.se --port 8080  --gamelink | tee lastGame.log",
         "test": "nyc mocha",
-        "doc": "jsdoc ./domain/** -d doc/html; jsdox ./domain/** --output doc/markdown"
+        "doc": "jsdoc ./domain/** -d doc/html; jsdox ./domain/** --output doc/markdown",
+        "silent": "node snake-cli.js ./snakepit/ajnudel-bot.js --host primrose.blossom.dsek.se --port 8080 --silent >> logs.txt",
+        "ten": "while ((1)); do yarn silent; done"
     },
     "dependencies": {
         "dateformat": "^3.0.3",

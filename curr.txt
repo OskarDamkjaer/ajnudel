@@ -1,0 +1,6 @@
+yarn run v1.9.4
+$ node snake-cli.js ./snakepit/ajnudel-bot.js --host primrose.blossom.dsek.se --port 8080  --gamelink
+[1m[31m17:01:40.281 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m17:01:40.318 - ERROR - Error - WS connection error[0m undefined
+Done in 30.46s.

@@ -33,6 +33,7 @@ const {
 
 const debug = (msg = "") => it => log(msg, it) || it;
 const flatten = (acc, curr) => acc.concat(curr);
+// last direction
 
 function onMapUpdated(mapState, myUserId) {
     const startTime = performance.now();
@@ -72,34 +73,50 @@ function onMapUpdated(mapState, myUserId) {
         .map(expandPositions)
         .reduce(flatten, []);
 
-    const fill = coords => {
+    const fill = (coords, deadSpot) => {
         shouldDie = false;
-        const depth = dfs(coords, {}, 0);
+        const depth = dfs(coords, {}, 0, deadSpot);
         shouldDie = false; //Torktummlarprincipen
-        console.log(depth);
         return depth;
     };
 
     let shouldDie = false; //snyggare med closure
-    const wantedDistance = 200;
-    const dfs = (coords, visited, depth) => {
+    const myDistance = 100;
+    const nemDistance = 30;
+    const dfs = (coords, visited, depth, deadSpot) => {
         const pos = translateCoordinate(coords, width);
-        const hitBottom = depth === wantedDistance;
-        const dead = !safeHere(coords);
         const dejavu = visited[pos];
-        const couldBeTaken = translateCoordinates(othersAfterOne, width).includes(
+        const isDeadSpot = pos === deadSpot;
+        let wantedDistance = myDistance;
+        const hitBottom = depth === wantedDistance;
+        let dead = !safeHere(coords);
+        let couldBeTaken = translateCoordinates(othersAfterOne, width).includes(
             pos
         );
-
         shouldDie = shouldDie || hitBottom;
 
-        if (hitBottom || dead || dejavu || shouldDie || couldBeTaken) {
+        //console.log(dead, dejavu, isDeadSpot, couldBeTaken);
+        // avoid other snake thinking its insantly dead
+        if (deadSpot) {
+            couldBeTaken = false;
+            dead = !safeHere(coords) && depth !== 0;
+            wantedDistance = nemDistance;
+        }
+
+        if (
+            hitBottom ||
+            dead ||
+            dejavu ||
+            shouldDie ||
+            couldBeTaken ||
+            isDeadSpot
+        ) {
             return depth;
         }
         visited[pos] = true;
 
         return Math.max(
-            ...expandPositions(coords).map(c => dfs(c, visited, depth + 1)),
+            ...expandPositions(coords).map(c => dfs(c, visited, depth + 1, deadSpot)),
             0
         );
     };
@@ -125,16 +142,39 @@ function onMapUpdated(mapState, myUserId) {
         death: -99999,
         takenSoon: -20000,
         trap: -10000,
-        deathIn2: -3,
+        deathIn2: -400,
+        dubbleslit: -300,
         food: 1,
         othersWeight: -1,
-        emptyTile: 1
+        emptyTile: 1,
+        removedFromNem: 2
     };
 
-    const setScore = opt => ({
+    const ortoDir = {
+        UP: ["LEFT", "RIGHT"],
+        DOWN: ["LEFT", "RIGHT"],
+        LEFT: ["DOWN", "UP"],
+        RIGHT: ["DOWN", "UP"]
+    };
+
+    const scoreTags = opt => ({
         ...opt,
         score: opt.tags.reduce((acc, curr) => acc + weights[curr], 0)
     });
+
+    const customScore = (opt, score) => ({
+        ...opt,
+        score: opt.score + score
+    });
+
+    const { coords: nemesisHead } = otherSnakesHeads
+        .map(coords => ({
+            coords,
+            dist: getManhattanDistance(coords, myCoords)
+        }))
+        .sort((a, b) => a.dist - b.dist)[0] || { coords: { x: -1, y: -1 } };
+
+    const nemesisRoomSize = fill(nemesisHead, true);
 
     const bestDirection = possibleDirections
         .map(direction => {
@@ -142,8 +182,20 @@ function onMapUpdated(mapState, myUserId) {
             const second = coordsAfterMove(direction, first);
             const roomSize = fill(first);
             const takenSoon = othersAfterOne.includes(first);
-            //const canTrap;
-            //const canWinBySepuku;
+            const nemesisNewRoom = fill(
+                nemesisHead,
+                translateCoordinate(first, width)
+            );
+            const removeNemesis = nemesisRoomSize - nemesisNewRoom;
+
+            const slitWidth = ortoDir[direction]
+                .map(dir => {
+                    const oneSideStep = coordsAfterMove(dir, first);
+                    const twoSideStep = coordsAfterMove(dir, oneSideStep);
+                    return [oneSideStep, twoSideStep].map(safeHere);
+                })
+                .reduce(flatten, [])
+                .filter(a => a).length;
 
             return {
                 direction,
@@ -152,25 +204,32 @@ function onMapUpdated(mapState, myUserId) {
                 coordsAfterMove: first,
                 coordsAfterTwo: second,
                 roomSize,
-                takenSoon
+                takenSoon,
+                slitWidth,
+                removeNemesis
             };
         })
         .map(opt => addTag(!safeHere(opt.coordsAfterMove) && "death", opt))
         .map(opt => addTag(!safeHere(opt.coordsAfterTwo) && "deathIn2", opt))
         .map(opt => addTag(opt.takenSoon && "takenSoon", opt))
-        .map(setScore)
-        .map(opt => ({
-            ...opt,
-            score: opt.score + opt.roomSize * weights.emptyTile
-        }))
+        .map(opt => addTag(opt.roomSize < 80 && "trap", opt))
+        .map(opt => addTag(opt.slitWidth < 2 && "dubbleslit", opt))
+        .map(scoreTags)
+        .map(opt => customScore(opt, opt.roomSize * weights.emptyTile))
+        .map(opt => customScore(opt, opt.removeNemesis * weights.removedFromNem))
         .map(debug("options"))
         .sort(scoreSort)[0].direction;
 
     // TODO, check if going to be to slow and if so, don't do the call
+    // TODO, prevent full on collission.
+    // TODO, weights
+    // TODO, check that allways takes best room
+    // tood prevent snirklande längs väggar
+    // TODo försölk gå mot kanten ju mer i mitten du är
     log("I took:", bestDirection);
     const snakeBrainDump = {};
     snakeBrainDump.myCoords = myCoords;
-    console.log("thinking took:", performance.now() - startTime);
+    log("thinking took:", performance.now() - startTime);
     return {
         direction: bestDirection,
         debugData: snakeBrainDump
@@ -207,15 +266,12 @@ function onGameStarted(event) {
 
 function onGameResult(event) {
     log("On Game Result");
-    log(event);
-    log(
-        event.payload.playerRanks.find(
-            ({ playerName }) => playerName === "ajnudel"
-        ),
+    console.log(
         event.payload.playerRanks.find(({ playerName }) => playerName === "ajnudel")
         .alive ?
-        "YOU WIN" :
-        "YOU LOST"
+        "VICTORY" :
+        "DEFEAT",
+        event.payload.gameId
     );
     // Implement as needed.
 }

@@ -1,0 +1,918 @@
+DEFEAT a7486d88-f857-4f7d-b657-52ee9895ed5e
+DEFEAT 998454cf-aea9-4d35-8455-94b1a0bc6e93
+DEFEAT 7391196f-8208-415c-b811-8f9bf01b7310
+VICTORY 6b61e631-2ce2-413d-89ac-5caa2d2164f7
+DEFEAT b309f350-a73b-4663-b143-a12f5b7db5bf
+DEFEAT 2f4d1b21-5afa-4f27-8450-9f2ccc2c0c8a
+DEFEAT 209d0ccd-16ba-4a15-b2ed-d91ab3bd5be9
+DEFEAT 92e52638-8aca-48eb-9f29-13b8480782cb
+DEFEAT 06ba4e26-b4dd-41aa-a238-6ef3f49726ce
+DEFEAT 14ed4e2c-3bad-447b-9cbe-b9bba7e31290
+VICTORY d75088cc-42a1-405b-840a-23268fb88794
+DEFEAT b7b29157-f606-42c7-becc-4cbca7bcec89
+DEFEAT 58267ea8-06f8-45f1-9464-a9456fae8b04
+VICTORY 34b00366-6b8b-4f44-91d9-ae61a922b0ee
+DEFEAT 3da7776c-8dde-445c-ab69-f53139d27796
+DEFEAT 36aa5e87-4f3d-41fe-9eaf-57e3d3cebecf
+DEFEAT 6612239b-b29e-4d3f-a0ac-982232e8e8b0
+DEFEAT 53f67e4f-3e7d-41b6-8fbb-5412c1009f88
+VICTORY 4aedab5e-8f21-4862-9dbe-9b4c456f2a35
+DEFEAT 5432d6b7-feae-455f-93ce-95e98f2f786f
+[1m[31m10:58:55.650 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m10:58:55.663 - ERROR - Error - WS connection error[0m undefined
+[1m[31m10:58:57.600 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m10:58:57.606 - ERROR - Error - WS connection error[0m undefined
+[1m[31m10:58:59.997 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m10:59:00.321 - ERROR - Error - WS connection error[0m undefined
+DEFEAT 1e9c2155-fa6d-4f3a-a3ef-b809bcdd0a66
+VICTORY f694bb14-ff4d-4cbb-b104-76c27ba93c52
+DEFEAT 995ebd4f-02c2-4b99-943f-b8aa312d4c60
+VICTORY 44ab3938-54ec-4165-a493-6f0ccc49da32
+VICTORY 1b532f88-1cc5-4726-8634-6cf939b040a9
+VICTORY aa198052-014f-4a37-b11f-3a6549375028
+VICTORY ff05be48-24e0-4fa1-a8b3-c775d02106ca
+DEFEAT 6ab51aba-f10a-4ff6-8dfa-aa5af175cadb
+DEFEAT 5779683e-9b3f-4844-916e-5d6befb0c761
+DEFEAT aca607af-ecce-441b-b159-e2799d62d9bd
+DEFEAT 3048f50a-53c7-4b29-a381-19d5b7ff7ac7
+DEFEAT e59f4505-e354-4f21-8079-6d2d58db3d92
+DEFEAT c1b97f5d-9072-4886-94e6-d16b437daefc
+DEFEAT 83062472-7cb0-4156-9151-01b92f0760f7
+DEFEAT 5a3000b3-05ca-4956-a7b9-7da495739c19
+DEFEAT 701d6f1c-3599-45dd-a7b1-081e6ef30d93
+DEFEAT ae1cac1c-6e99-4e66-82db-ac48890b8f7e
+VICTORY a0d8be45-b235-483d-a257-a3e3ff2c3b8c
+VICTORY 351b4033-547d-46c6-9ae4-9be76025d720
+DEFEAT 4713c217-3e40-4678-ab1c-897bdee55597
+DEFEAT ad6403b7-7192-45f4-97b0-1ca389c90af8
+VICTORY ec54a6bc-addf-4568-abbb-448e3f574684
+DEFEAT 7323c291-2aea-47ef-807f-ff9d46322671
+VICTORY 5ae06db6-0be1-4d5e-af0b-f3b447122f40
+VICTORY e7136417-8cd4-4bec-9489-a560db5cc024
+VICTORY 38b94eb9-17ae-4700-bcef-571e22481e19
+DEFEAT 67bdcc2a-8c67-429e-a9d9-539b4a441932
+DEFEAT 2bf22361-9a14-4499-ad04-a710ab67e866
+DEFEAT 770ff46d-73fa-4282-a949-3389aacf754d
+DEFEAT 9581cff8-ff14-486c-a091-0aa560db2e8d
+DEFEAT 901068d4-68b6-46c7-8bd2-2464aa8220f5
+DEFEAT 456e48d0-c774-4376-b8ae-8687bbf85443
+DEFEAT a7a651cc-8687-4cb2-bf16-35660a63962c
+[1m[31m11:33:27.552 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m11:33:27.627 - ERROR - Error - WS connection error[0m undefined
+[1m[31m11:33:32.507 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m11:33:32.521 - ERROR - Error - WS connection error[0m undefined
+[1m[31m11:33:35.090 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m11:33:35.096 - ERROR - Error - WS connection error[0m undefined
+[1m[31m11:33:36.226 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m11:33:36.229 - ERROR - Error - WS connection error[0m undefined
+[1m[31m11:33:37.183 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m11:33:37.187 - ERROR - Error - WS connection error[0m undefined
+[1m[31m11:33:38.375 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m11:33:38.380 - ERROR - Error - WS connection error[0m undefined
+[1m[31m11:33:39.705 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m11:33:39.710 - ERROR - Error - WS connection error[0m undefined
+[1m[31m11:33:40.873 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m11:33:40.878 - ERROR - Error - WS connection error[0m undefined
+[1m[31m11:33:41.913 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m11:33:41.917 - ERROR - Error - WS connection error[0m undefined
+DEFEAT 85275168-5039-45fc-b28a-9c71587eb659
+VICTORY 8f463083-05e5-4adf-a350-be63f29c172c
+VICTORY 599710e8-5db7-4f18-9e6e-2625472fd1aa
+VICTORY 427b8882-97ac-4f11-9574-5f4948a97fb3
+DEFEAT 96dc7453-7e19-4890-b1e5-b1d93e97d554
+DEFEAT 06acdb30-b572-464e-99f4-ba41e54c9bdf
+DEFEAT fba4e10c-a601-412f-9d68-382652aafa9b
+VICTORY 48cee285-9cd7-4051-9318-bf72b6f12f72
+DEFEAT 1190f723-8c6f-4570-b5c9-17ee983af41f
+VICTORY 55dfdeb7-688d-4e73-87ad-a0429265c25e
+VICTORY c8a27522-d70a-467d-b610-c0c1040ed372
+DEFEAT fca91f91-e54b-4626-996d-da9a366f54ca
+DEFEAT 08a5c803-c16a-4e37-a6b1-09dbe05c4617
+DEFEAT 92d39fc4-3f33-4999-beca-530e81e38e41
+DEFEAT 4233f083-f5ca-421f-842d-ff3ea768101b
+DEFEAT 3e263975-305b-438a-8f02-ce6ae6b81a1f
+DEFEAT b3201f5e-9bef-4fa0-8762-32b1ba04302a
+DEFEAT 98d88d4c-e0bb-49e8-b173-c21d75b0bbb4
+DEFEAT 3107a076-28cd-45c2-9e5b-ea5fa5dfe4c8
+DEFEAT a223aebd-7405-44e9-9306-5d808dcb7f13
+DEFEAT 033eff38-3103-4cc4-a3ee-9fade55d179b
+DEFEAT 5ddebfa2-56ca-4563-ac8c-7ac85febd573
+VICTORY ddfaf3f1-4fa3-4b83-afd4-5b522d656be6
+DEFEAT c75b84f6-86f7-4def-8145-2ace7d9d9350
+VICTORY 4fc87322-eb37-41c2-8e9e-0b6fc5cd6bbd
+DEFEAT 7f56923a-0045-42d8-bd2e-cb4cc64f29a1
+VICTORY 881eefd6-95ab-4a47-945e-f4279afee9ea
+DEFEAT 70bc8408-2c64-4434-8c1b-3e3e53ca630f
+DEFEAT ecfeb6fb-f460-435c-91ec-78ca2da52354
+DEFEAT 5bef186f-d3f6-4891-8f66-8bbfadb09092
+DEFEAT 83e984bd-a21d-49f5-a8bb-d2f47e4b9359
+DEFEAT 5dcab87a-4e0a-4951-bf9a-2668c69550d2
+VICTORY 7dcae317-7381-426c-86d6-83e4e416742d
+VICTORY 1b0e0145-78bb-4263-bc28-7c0573b79c69
+DEFEAT 89b6882a-ffcc-4906-973c-fd9b1f6d0f13
+DEFEAT d20bacbf-772e-423d-8f4f-d03d071485ef
+DEFEAT 3508d5cc-5e2b-4376-a9c0-7064a069b6b6
+1006
+[1m[31m12:07:01.404 - ERROR - Error - WS connection error[0m undefined
+DEFEAT a2b44f23-6149-4332-a183-23c5bda21825
+VICTORY 17ce4057-10c2-4a28-a019-17931b82aeff
+DEFEAT c2e2e164-d856-4e8f-9d8c-22eb9eb184e3
+VICTORY e06bb6b2-069c-4d17-9672-21c9f066351b
+DEFEAT dbc41e5c-7c6f-41a8-a5cb-50b0b72bf178
+DEFEAT d514b9ce-f636-4cf2-b2d2-483aebde4f1c
+VICTORY 0c98ed92-ec5c-4cf6-842d-9bcb0f6a7980
+DEFEAT 6e11b4cd-6592-40f2-b090-7e67afbbbfc4
+DEFEAT d2464d70-19a1-4376-9863-b23b0c2ef54c
+VICTORY bb9bf962-22cc-40a9-9e32-411fb46f5510
+DEFEAT 83abdfae-4293-443b-87b4-6b6c63c4fd3c
+DEFEAT c666630a-ae59-4641-b0a6-5b697253dc05
+DEFEAT 7fdc419a-0741-4b97-9f32-4ba2f899a910
+DEFEAT bd398a2a-f703-47fc-914c-a2a666cc40b0
+DEFEAT dac62640-83a5-4c85-b631-1a0477baafc6
+VICTORY f9116a00-3b3a-47c7-a082-6b9487434a57
+DEFEAT d9032663-8866-419a-8971-0bc9f707ed09
+DEFEAT ccb9e48c-e7bc-4bbe-a95f-7b9c44c0ef87
+VICTORY e64ec86b-1900-49d6-a646-78adf7031e6a
+DEFEAT 994672b8-7552-431c-ac73-bb456f8ed516
+VICTORY 2d8fc726-d048-457a-9ab0-fdad3179a2fa
+DEFEAT 50480ba3-22b0-48e2-8d9e-a9856a6fdfcd
+DEFEAT eb38e58a-2642-4c48-a848-11faa7ff54be
+DEFEAT 6d0c9e4d-9582-49a5-a14a-8426207b9009
+VICTORY c830b70d-7e5a-4047-a7a2-ff462d6f6e33
+DEFEAT 69840c20-fab3-483f-9997-9a4ede89ddca
+DEFEAT ab074d59-d1fe-4c07-a892-7c05c699f6f8
+DEFEAT 28e5c13c-ca99-4b06-9cac-dafd331e8cbd
+DEFEAT ac04528e-f4f3-491f-8aa1-a6fed399611c
+DEFEAT 39ed227e-64c5-45a2-aafd-26b3396cfe9d
+VICTORY 72e1b5d1-f955-4576-8de7-25a405151f98
+VICTORY 4f05be0b-6072-4501-99e1-65a71753797b
+DEFEAT a6d1c64c-1c52-447c-bf78-8098783b2f87
+VICTORY e7156959-e8b7-41ae-b6cd-851ed68825d7
+DEFEAT 3a5b8cbd-874c-4249-b19d-5535200ade0f
+DEFEAT 96226b65-76fc-4341-a527-f87c080657a1
+DEFEAT 5fdea926-9ac3-41d8-865d-d85422c625a5
+1006
+[1m[31m13:41:18.211 - ERROR - Error - WS connection error[0m undefined
+DEFEAT c42a1657-4944-4131-8311-1208fef69781
+DEFEAT ebbef390-04ae-42e5-90f1-38dd365ae689
+DEFEAT 6cba3f0b-35c2-4b15-a4d8-7367844427ce
+DEFEAT d3a12598-c775-4ee8-830d-83c730435478
+DEFEAT 0625c483-676d-452f-82c1-5a4b8687db0c
+DEFEAT ae2f9f18-ff39-42cc-a0e4-4c13500bc876
+DEFEAT 11a5a5a5-4c1f-4667-94fc-943bf8c03614
+DEFEAT ed222304-c2f5-475e-8013-66a46da2a883
+DEFEAT 23191fbe-212b-40a6-8ec7-eb3b77004357
+DEFEAT b52835ba-e389-4ef5-8da1-0d0dc5f42215
+DEFEAT a5e16eaa-4204-48b9-9873-8d64ddcac51f
+DEFEAT aa5b4c89-15d8-4b15-bdaa-3069dc24dc50
+VICTORY a74bead2-8175-494f-a3a8-eefcdbb4781a
+DEFEAT d0601a50-f5c2-447a-acdf-93ad0718ac83
+DEFEAT f5384528-8d6b-432c-8f26-8bcc849199a1
+DEFEAT f125523c-7d9e-401c-bccd-5787f5cc2e3f
+DEFEAT 7a27490c-c6e0-4256-ba5b-71f82e294e96
+DEFEAT 8705875b-56c6-4db5-b2f4-b03347762fce
+VICTORY 951719a8-bf5a-4e44-851e-6d6023b1e444
+VICTORY cbde0959-6308-4f42-a83d-32853115a9ea
+DEFEAT ed48c4f5-8ec0-4823-8476-a1a19e5cd01d
+DEFEAT 618f512b-3724-47d1-bd8d-cc85f2307c82
+VICTORY 5c333b20-2cd9-460d-bbb4-9028182d8ddc
+DEFEAT 384c56f9-713b-4f35-a963-8ce8deeeace1
+DEFEAT 6e51a910-8469-4f71-9824-1177b1d6eec5
+DEFEAT 641a1452-ff32-4c30-b5cf-89ffc9676a6e
+VICTORY 11b11dd2-d513-4a10-8eac-4fee42a95a01
+VICTORY 85ed2947-2c74-4db9-86b8-0be7dd84c94e
+VICTORY 84aeacde-5e6c-405f-9ff7-233df1bcb14f
+VICTORY 6c4be2e8-c95a-4df1-8894-bacc9fa4203c
+DEFEAT 32377f1b-6668-4db1-8e89-5a47f2a66b3e
+DEFEAT ced42085-c7b7-4b77-8fce-6095ebebebce
+1006
+[1m[31m16:18:09.984 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:18:58.180 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:18:58.187 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:04.835 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:04.861 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:06.368 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:06.373 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:07.393 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:07.397 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:08.304 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:08.307 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:09.416 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:09.421 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:10.617 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:10.621 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:11.596 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:11.599 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:12.500 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:12.505 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:13.410 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:13.413 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:14.303 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:14.306 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:15.184 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:15.187 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:16.141 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:16.149 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:17.283 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:17.286 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:18.163 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:18.166 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:19.073 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:19.076 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:20.098 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:20.101 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:21.088 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:21.092 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:22.348 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:22.352 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:23.305 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:23.308 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:24.188 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:24.192 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:25.110 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:25.114 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:26.184 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:26.187 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:27.084 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:27.087 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:28.014 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:28.017 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:28.936 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:28.939 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:29.813 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:29.816 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:30.755 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:30.759 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:32.062 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:32.066 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:32.972 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:32.975 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:33.929 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:33.932 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:34.873 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:34.876 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:35.781 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:35.784 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:36.694 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:36.699 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:37.606 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:37.610 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:38.574 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:38.578 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:39.550 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:39.553 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:40.560 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:40.563 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:41.457 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:41.460 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:42.473 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:42.477 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:43.632 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:43.635 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:44.809 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:44.812 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:45.947 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:45.950 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:47.103 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:47.107 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:48.135 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:48.143 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:49.342 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:49.346 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:50.763 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:50.767 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:52.087 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:52.091 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:56.598 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:56.604 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:19:59.170 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:19:59.179 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:00.269 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:00.273 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:01.323 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:01.326 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:02.326 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:02.329 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:03.269 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:03.274 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:04.203 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:04.208 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:05.269 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:05.276 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:06.278 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:06.281 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:07.205 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:07.210 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:08.156 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:08.159 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:09.090 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:09.093 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:09.971 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:09.975 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:10.886 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:10.890 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:11.901 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:11.904 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:13.094 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:13.101 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:14.185 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:14.188 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:15.059 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:15.062 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:15.943 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:15.946 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:16.835 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:16.838 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:17.722 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:17.725 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:18.594 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:18.598 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:19.507 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:19.510 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:20.389 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:20.392 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:21.290 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:21.293 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:22.189 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:22.192 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:23.081 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:23.086 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:23.979 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:23.982 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:24.870 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:24.873 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:25.842 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:25.845 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:26.794 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:26.797 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:27.723 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:27.728 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:28.709 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:28.712 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:29.638 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:29.644 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:30.532 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:30.535 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:31.467 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:31.471 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:32.414 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:32.417 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:33.287 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:33.290 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:34.235 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:34.239 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:35.122 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:35.126 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:35.996 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:36.001 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:36.919 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:36.921 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:37.814 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:37.817 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:38.699 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:38.702 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:39.588 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:39.592 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:40.489 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:40.492 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:41.400 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:41.403 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:42.268 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:42.273 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:43.170 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:43.173 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:44.083 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:44.086 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:45.009 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:45.012 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:45.884 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:45.887 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:46.782 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:46.785 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:47.857 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:47.861 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:48.857 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:48.861 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:49.871 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:49.875 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:50.992 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:51.000 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:52.027 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:52.030 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:53.072 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:53.075 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:54.069 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:54.072 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:54.930 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:54.933 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:55.924 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:55.927 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:56.809 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:56.812 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:57.687 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:57.690 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:58.615 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:58.618 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:20:59.563 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:20:59.566 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:00.465 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:00.469 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:01.352 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:01.355 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:02.275 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:02.280 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:03.230 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:03.234 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:04.482 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:04.486 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:05.582 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:05.585 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:06.570 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:06.573 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:07.493 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:07.496 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:08.367 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:08.370 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:09.235 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:09.238 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:10.107 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:10.110 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:10.997 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:11.000 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:11.872 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:11.875 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:12.740 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:12.743 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:13.611 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:13.614 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:14.486 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:14.489 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:15.434 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:15.437 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:16.325 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:16.328 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:17.214 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:17.216 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:18.090 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:18.095 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:18.992 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:18.995 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:19.878 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:19.881 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:20.767 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:20.770 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:21.651 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:21.655 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:22.596 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:22.599 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:23.475 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:23.478 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:24.369 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:24.374 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:25.249 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:25.252 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:26.133 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:26.136 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:26.999 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:27.002 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:27.888 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:27.891 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:28.816 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:28.819 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:29.729 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:29.734 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:30.642 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:30.645 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:31.508 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:31.512 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:32.405 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:32.408 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:33.269 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:33.272 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:34.132 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:34.135 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:35.015 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:35.018 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:35.882 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:35.885 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:36.749 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:36.752 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:37.595 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:37.597 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:38.461 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:38.464 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:39.332 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:39.335 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:40.210 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:40.213 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:41.092 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:41.095 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:41.990 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:41.993 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:42.878 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:42.882 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:43.747 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:43.750 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:44.630 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:44.633 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:45.489 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:45.492 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:46.357 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:46.360 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:47.259 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:47.262 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:48.128 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:48.131 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:49.020 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:49.023 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:49.893 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:49.897 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:50.765 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:50.771 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:51.644 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:51.647 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:52.553 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:52.556 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:53.464 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:53.467 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:54.364 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:54.368 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:55.245 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:55.249 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:56.247 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:56.251 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:57.107 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:57.110 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:57.985 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:57.988 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:58.860 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:58.863 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:21:59.749 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:21:59.752 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:00.619 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:00.622 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:01.503 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:01.507 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:02.375 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:02.378 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:03.262 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:03.265 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:04.184 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:04.188 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:05.450 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:05.457 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:07.161 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:07.165 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:08.196 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:08.199 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:09.117 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:09.121 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:09.985 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:09.989 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:10.860 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:10.863 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:11.778 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:11.781 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:12.640 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:12.643 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:13.565 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:13.568 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:14.473 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:14.477 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:15.346 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:15.349 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:16.266 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:16.270 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:17.364 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:17.367 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:18.236 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:18.240 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:19.134 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:19.136 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:20.217 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:20.221 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:21.157 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:21.160 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:22.332 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:22.336 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:23.456 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:23.460 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:24.388 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:24.391 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:25.783 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:25.786 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:27.816 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:27.821 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:28.779 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:28.783 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:29.711 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:29.714 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:30.664 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:30.667 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:31.601 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:31.604 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:32.752 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:32.755 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:33.741 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:33.747 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:34.700 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:34.705 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:35.637 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:35.642 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:36.871 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:36.874 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:37.737 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:37.741 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:38.606 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:38.610 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:39.480 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:39.483 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:40.363 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:40.366 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:41.406 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:41.410 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:42.383 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:42.386 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:43.345 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:43.348 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:44.454 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:44.472 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:45.783 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:45.787 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:46.716 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:46.725 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:48.517 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:48.521 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:50.377 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:50.380 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:51.320 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:51.323 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:52.222 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:52.227 - ERROR - Error - WS connection error[0m undefined
+[1m[31m16:22:53.125 - ERROR - Error - WS connection error[0m undefined
+1006
+[1m[31m16:22:53.129 - ERROR - Error - WS connection error[0m undefined
+VICTORY 2a7bbe9e-833b-4ed5-9a54-d05810960439
+DEFEAT 3c081130-a8e1-440a-bb61-5e2401b2cd55
+VICTORY 650ba43f-35e1-497e-acb4-5f578f16bfe0
+VICTORY 914e48b5-6b56-40d5-b3ec-e45719ec6e66
+DEFEAT eee3fde7-8fb4-4e51-8cc6-0027c185e143
+DEFEAT d9985a0f-4d7c-4879-9eb2-94ca69ef3c80
+VICTORY e4850dfb-428b-4ee9-b976-bb293fed6d0c
+DEFEAT 33151170-825a-4a0e-a88b-a47934e79875
+DEFEAT a08d2f6c-f828-4d77-ab9e-f2642d487ab6
+VICTORY 759274e3-65a1-48b6-a0a0-c92ab398fd84
+DEFEAT 8e4866ea-fead-4555-9e80-060c0309947f
+DEFEAT 7ffdfd5b-088c-4e99-86f6-cae27f7e7572
+DEFEAT 22939694-ae44-43cc-ab30-a46aa34006e2
+VICTORY 656c1032-f872-4eda-b812-91e99f08b4c4
+VICTORY fce45c03-1542-4707-a931-3513a5d1cfdc
+DEFEAT 5f3f8284-e56a-468d-b298-0d98cce368ba
+DEFEAT ff382047-6f05-4502-ad55-4e1995fccb98
+DEFEAT da8da741-9e6e-4234-91ee-dffa5c5473d2
+DEFEAT 003c5546-c211-4f95-975c-729d6d2e6ef5
+VICTORY d129a6f8-67d9-4d59-92a3-1ce47de4d659
+DEFEAT c853488d-5df1-4d0d-8640-6b3287519b14
