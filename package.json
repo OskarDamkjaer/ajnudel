@@ -18,7 +18,7 @@
     "dependencies": {
         "dateformat": "^3.0.3",
         "json-socket": "^0.3.0",
-        "minimist": "^1.2.0",
+        "minimist": "^1.2.6",
         "opn": "^5.4.0",
         "ws": "^6.1.4"
     },
